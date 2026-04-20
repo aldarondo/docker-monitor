@@ -9,10 +9,13 @@ Runs on a daily schedule (APScheduler). On each tick:
 5. Writes results to each project's ROADMAP.md via the GitHub API.
 
 Environment variables required:
-  NAS_HOST   — e.g. http://192.168.0.64:5000
-  NAS_USER   — Synology username
-  NAS_PASS   — Synology password
   GH_PAT     — GitHub Personal Access Token (needs repo + workflow scopes)
+
+When running as a Docker container on the NAS, mount the Docker socket:
+  volumes: [/var/run/docker.sock:/var/run/docker.sock]
+
+When running in GitHub Actions, no NAS access is needed — the container
+pushes container_status.json to the repo, and GitHub Actions reads it.
 
 Set RUN_ONCE=true to run a single check and exit (useful for testing).
 """
@@ -47,16 +50,16 @@ def _load_container_status() -> set[str] | None:
     Returns set of running container names, or None if both sources are unavailable.
     Errors are written to docker-monitor's own ROADMAP.md.
     """
-    if os.environ.get("NAS_HOST"):
+    if os.path.exists("/var/run/docker.sock"):
         try:
             live = synology.get_running_containers()
             running = {c["name"] for c in live if c["running"]}
-            print(f"Container status from Synology API: {len(running)} running")
+            print(f"Container status from Docker socket: {len(running)} running")
             _push_container_status(live)  # keep repo file fresh for GitHub Actions
             container_status.clear_nas_error()
             return running
         except Exception as exc:
-            print(f"  Synology direct query failed: {exc} — trying repo file")
+            print(f"  Docker socket query failed: {exc} — trying repo file")
 
     containers, error = synology.get_status_from_repo()
     if error:

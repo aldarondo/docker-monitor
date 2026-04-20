@@ -16,9 +16,7 @@ import pytest
 from unittest.mock import MagicMock, patch
 
 os.environ.setdefault("GH_PAT", "test-token")
-os.environ.setdefault("NAS_USER", "admin")
-os.environ.setdefault("NAS_PASS", "pass")
-os.environ.pop("NAS_HOST", None)  # force repo-file path; direct Synology query skipped
+# Docker socket not present in test env → forces repo-file fallback path
 
 
 SAMPLE_ROADMAP = "# Project\n\n## 🚫 Blocked\n<!-- log blockers here -->\n"
