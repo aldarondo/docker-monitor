@@ -3,6 +3,24 @@
 ## Project Purpose
 Audit Docker/GHCR deploy health across all hub projects and surface failures to each project's ROADMAP.md — never auto-fixes, only reports.
 
+## Container Map (as of 2026-04-20)
+GHCR containers (CI/CD monitored):
+- `brian-mcp-memory` / `brian-mcp-tunnel` → aldarondo/brian-mcp
+- `brian-telegram` → aldarondo/brian-telegram
+- `claude-monarch` → aldarondo/claude-monarch
+- `enphase-juicebox-coordinator` → aldarondo/enphase-juicebox-coordinator
+- `enphase-mcp` → aldarondo/claude-enphase
+- `jellyfin-mcp` → aldarondo/jellyfin-automation
+- `juicebox-mcp` / `juicepassproxy` → aldarondo/claude-juicebox
+
+Non-GHCR aldarondo containers (GHCR migration audit targets):
+- `brian-email`, `brian-drive`, `claude-nirvana`, `claude-whoop`, `claude-withings`, `claude-walmart`, `claude-safeway`, `claude-kroger`
+
+## Auth
+- `GITHUB_PAT` env var — PAT stored in `~/Documents/GitHub/claude-synology/config.json` → `github.pat`
+- `NAS_HOST`, `NAS_USER`, `NAS_PASS` env vars — NAS connection from same config.json
+- Never commit credentials to tracked files
+
 ## Key Commands
 ```bash
 python -m venv .venv && source .venv/bin/activate
