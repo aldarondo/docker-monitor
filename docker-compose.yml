@@ -1,0 +1,11 @@
+services:
+  docker-monitor:
+    image: ghcr.io/aldarondo/docker-monitor:latest
+    container_name: docker-monitor
+    restart: unless-stopped
+    environment:
+      - NAS_HOST=http://192.168.0.64:5000
+      - NAS_USER=${NAS_USER}
+      - NAS_PASS=${NAS_PASS}
+      - GH_PAT=${GH_PAT}
+    network_mode: host
