@@ -27,17 +27,3 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/aldarondo/docker-monitor:latest
-
-      - name: Deploy to NAS
-        if: github.event_name == 'push' || github.event_name == 'schedule'
-        uses: appleboy/ssh-action@v1
-        with:
-          host: ${{ secrets.NAS_HOST_IP }}
-          username: ${{ secrets.NAS_USER }}
-          password: ${{ secrets.NAS_PASS }}
-          port: 2222
-          script: |
-            echo "${{ secrets.NAS_PASS }}" | sudo -S /usr/local/bin/docker compose \
-              -f /volume1/docker/docker-monitor/docker-compose.yml pull
-            echo "${{ secrets.NAS_PASS }}" | sudo -S /usr/local/bin/docker compose \
-              -f /volume1/docker/docker-monitor/docker-compose.yml up -d
