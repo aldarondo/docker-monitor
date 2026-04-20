@@ -22,8 +22,7 @@
 
 ### Phase 3 — GitHub Actions schedule
 - [ ] `[Code]` Add `.github/workflows/monitor.yml` — daily cron (`schedule: '0 8 * * *'`) that runs `python monitor.py`; secrets: `GITHUB_PAT`, `NAS_HOST`, `NAS_USER`, `NAS_PASS`
-- [ ] `[Human]` Add `GITHUB_PAT` secret to this repo at github.com/aldarondo/docker-monitor/settings/secrets/actions (value: PAT from claude-synology config.json)
-- [ ] `[Human]` Add `NAS_HOST`, `NAS_USER`, `NAS_PASS` secrets (NAS connection details from claude-synology config.json)
+- [ ] `[Code]` Add `GITHUB_PAT`, `NAS_HOST`, `NAS_USER`, `NAS_PASS` secrets to this repo via `gh secret set` (values from claude-synology config.json)
 
 ### Phase 4 — Tests
 - [ ] `[Code]` Write unit tests for `lib/roadmap.py` (update-existing vs append logic)
