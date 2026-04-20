@@ -35,10 +35,29 @@ def load_config() -> list[dict]:
 
 def _load_container_status() -> set[str] | None:
     """
-    Read container running-state from the repo-committed status file.
-    Returns set of running container names, or None if unavailable (stale/missing).
+    Get container running-state.
+
+    Strategy:
+    1. Direct Synology API query (works when running as Docker container on NAS).
+       On success, also pushes container_status.json to the repo so GitHub Actions
+       can use it as a fallback.
+    2. Repo file fallback — container_status.json committed by the NAS container.
+       Used when running in GitHub Actions (no LAN access).
+
+    Returns set of running container names, or None if both sources are unavailable.
     Errors are written to docker-monitor's own ROADMAP.md.
     """
+    if os.environ.get("NAS_HOST"):
+        try:
+            live = synology.get_running_containers()
+            running = {c["name"] for c in live if c["running"]}
+            print(f"Container status from Synology API: {len(running)} running")
+            _push_container_status(live)  # keep repo file fresh for GitHub Actions
+            container_status.clear_nas_error()
+            return running
+        except Exception as exc:
+            print(f"  Synology direct query failed: {exc} — trying repo file")
+
     containers, error = synology.get_status_from_repo()
     if error:
         print(f"  NAS status error: {error}")
@@ -46,8 +65,30 @@ def _load_container_status() -> set[str] | None:
         return None
     container_status.clear_nas_error()
     running = {c["name"] for c in containers if c["running"]}
-    print(f"Container status loaded from repo: {len(running)} running")
+    print(f"Container status from repo file: {len(running)} running")
     return running
+
+
+def _push_container_status(containers: list[dict]) -> None:
+    """Commit container_status.json to the repo so GitHub Actions can use it."""
+    import json
+    from datetime import datetime, timezone
+    from lib import github
+
+    payload = {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "containers": containers,
+    }
+    content = json.dumps(payload, indent=2) + "\n"
+    _, sha = github.get_file("aldarondo/docker-monitor", "container_status.json")
+    try:
+        github.update_file(
+            "aldarondo/docker-monitor", "container_status.json",
+            content, sha, "chore: update container status"
+        )
+        print(f"  Pushed container_status.json ({len(containers)} containers)")
+    except Exception as exc:
+        print(f"  Warning: failed to push container_status.json: {exc}")
 
 
 def run_checks() -> None:

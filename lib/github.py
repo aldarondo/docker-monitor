@@ -63,15 +63,17 @@ def get_file(repo: str, path: str) -> tuple[str | None, str | None]:
         return base64.b64decode(data["content"]).decode(), data["sha"]
 
 
-def update_file(repo: str, path: str, content: str, sha: str, message: str) -> None:
-    """Commit an updated file to a repo."""
+def update_file(repo: str, path: str, content: str, sha: str | None, message: str) -> None:
+    """Commit an updated (or new) file to a repo. Pass sha=None to create."""
+    body: dict = {
+        "message": message,
+        "content": base64.b64encode(content.encode()).decode(),
+    }
+    if sha:
+        body["sha"] = sha
     with _client() as client:
         resp = client.put(
             f"https://api.github.com/repos/{repo}/contents/{path}",
-            json={
-                "message": message,
-                "content": base64.b64encode(content.encode()).decode(),
-                "sha": sha,
-            },
+            json=body,
         )
         resp.raise_for_status()
