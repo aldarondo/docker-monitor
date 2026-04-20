@@ -17,4 +17,5 @@
 - 2026-04-20 — GHCR image built and pushed to `ghcr.io/aldarondo/docker-monitor:latest`
 
 ## 🚫 Blocked
+- ❌ [docker-monitor:nas-status-stale] container_status.json not found in repo — run scripts/push_status.py on the NAS to create it — 2026-04-20 16:57 UTC
 <!-- log blockers here -->
