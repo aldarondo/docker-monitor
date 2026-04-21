@@ -63,6 +63,19 @@ def get_file(repo: str, path: str) -> tuple[str | None, str | None]:
         return base64.b64decode(data["content"]).decode(), data["sha"]
 
 
+def list_secrets(repo: str) -> set[str]:
+    """Return the set of Actions secret names for a repo (values are never exposed)."""
+    with _client() as client:
+        resp = client.get(
+            f"https://api.github.com/repos/{repo}/actions/secrets",
+            params={"per_page": 100},
+        )
+        if resp.status_code == 403:
+            return set()  # PAT lacks secrets:read scope — treat as unknown, not error
+        resp.raise_for_status()
+        return {s["name"] for s in resp.json().get("secrets", [])}
+
+
 def update_file(repo: str, path: str, content: str, sha: str | None, message: str) -> None:
     """Commit an updated (or new) file to a repo. Pass sha=None to create."""
     body: dict = {

@@ -26,7 +26,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
 
 from lib import synology
-from checks import deploy_status, weekly_schedule, ghcr_migration, container_status
+from checks import deploy_status, weekly_schedule, ghcr_migration, container_status, deploy_config, deploy_secrets
 
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), "config", "containers.yaml")
 
@@ -120,6 +120,8 @@ def run_checks() -> None:
             if repo not in seen_repos:
                 deploy_status.run(entry)
                 weekly_schedule.run(entry)
+                deploy_config.run(entry)
+                deploy_secrets.run(entry)
                 seen_repos.add(repo)
             else:
                 print(f"  {repo} already checked this run")
