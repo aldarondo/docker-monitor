@@ -5,7 +5,26 @@
 <!-- nothing active -->
 
 ## 🔲 Backlog
-- [x] `[Code]` 2026-04-20 — Triggered `workflow_dispatch` run #24677775498. Completed in 37s. Results: brian-telegram ✅, claude-enphase ✅, jellyfin-automation ✅; deploy-failed written to claude-monarch + enphase-juicebox-coordinator + claude-juicebox; no-weekly-schedule written to brian-mcp + jellyfin-automation; no-ghcr-image written to brian-drive, claude-nirvana, claude-whoop, claude-withings, claude-walmart. NAS unreachable from GH Actions (expected — local network) — fallback correctly checked all repos.
+
+### Cross-project repairs (repos not cloned locally — tracked here so they aren't lost)
+
+docker-monitor writes blocked entries to each project's ROADMAP nightly, but repos that aren't
+cloned locally won't surface those repairs. The items below are the known outstanding repairs
+so they're visible from a single place.
+
+**GHCR migration needed** — 8 containers still use base images; `no-ghcr-image` is written to
+their ROADMAPs on every docker-monitor run. For each: clone repo, add `Dockerfile`, create
+`.github/workflows/build.yml` using the `/new-project` step 2h3 template (cloudflared + CF
+service token via `create-access-service-token.mjs`), deploy to NAS.
+
+- [ ] `[Code]` Migrate `brian-email` (aldarondo/brian-email)
+- [ ] `[Code]` Migrate `brian-drive` (aldarondo/brian-drive)
+- [ ] `[Code]` Migrate `claude-nirvana` (aldarondo/claude-nirvana)
+- [ ] `[Code]` Migrate `claude-whoop` (aldarondo/claude-whoop)
+- [ ] `[Code]` Migrate `claude-withings` (aldarondo/claude-withings)
+- [ ] `[Code]` Migrate `claude-walmart` (aldarondo/claude-walmart)
+- [ ] `[Code]` Migrate `claude-safeway` (aldarondo/claude-safeway)
+- [ ] `[Code]` Migrate `claude-kroger` (aldarondo/claude-kroger)
 
 ## ✅ Completed
 - 2026-04-20 — Project scaffolded: README, CLAUDE.md, ROADMAP.md, tests/, GitHub repo, Synology deploy key
@@ -15,6 +34,8 @@
 - 2026-04-20 — Phase 3: `.github/workflows/monitor.yml` (daily 08:00 UTC, GitHub Actions runner) + `build-push.yml` (weekly GHCR image rebuild); secrets set via `gh secret set`
 - 2026-04-20 — Phase 4: 20 unit + integration tests passing (roadmap writer, GitHub API client, deploy status check, full end-to-end mock run)
 - 2026-04-20 — GHCR image built and pushed to `ghcr.io/aldarondo/docker-monitor:latest`
+- 2026-04-21 — Cloudflare Tunnel `nas-ssh` deployed (`cloudflared-nas-ssh` container on NAS); all 7 GHCR repos updated to use `cloudflared access ssh --id/--secret` + individual service tokens via `create-access-service-token.mjs`
+- 2026-04-21 — Added `checks/deploy_config.py` (flags appleboy/ssh-action and hardcoded LAN IPs) and `checks/deploy_secrets.py` (flags missing NAS_SSH_PASSWORD/CF_ACCESS_CLIENT_ID/CF_ACCESS_CLIENT_SECRET); 9 new unit tests passing
 
 ## 🚫 Blocked
 
