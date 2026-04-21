@@ -1,6 +1,21 @@
 {
-  "timestamp": "2026-04-20T17:07:40.593594+00:00",
+  "timestamp": "2026-04-21T08:00:01.075222+00:00",
   "containers": [
+    {
+      "name": "brian-email",
+      "image": "ghcr.io/aldarondo/brian-email:latest",
+      "running": true
+    },
+    {
+      "name": "cloudflared-nas-ssh",
+      "image": "cloudflare/cloudflared:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-juicebox-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
+      "running": true
+    },
     {
       "name": "docker-monitor",
       "image": "ghcr.io/aldarondo/docker-monitor:latest",
@@ -62,11 +77,6 @@
       "running": true
     },
     {
-      "name": "brian-email",
-      "image": "node:20-alpine",
-      "running": true
-    },
-    {
       "name": "brian-drive",
       "image": "node:20-alpine",
       "running": false
@@ -79,11 +89,6 @@
     {
       "name": "brian-telegram",
       "image": "ghcr.io/aldarondo/brian-telegram:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-juicebox-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
       "running": true
     },
     {
