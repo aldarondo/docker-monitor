@@ -31,3 +31,4 @@ Thumbs.db
 *.swn
 .vscode/settings.json
 .idea/workspace.xml
+.githooks/
