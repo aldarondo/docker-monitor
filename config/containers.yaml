@@ -36,43 +36,34 @@ containers:
     image: ghcr.io/aldarondo/claude-juicebox-juicepassproxy
     repo: aldarondo/claude-juicebox
 
-  # ── Non-GHCR aldarondo containers (GHCR migration check) ─────────────────
   - name: brian-email
-    image: node:20-alpine
+    image: ghcr.io/aldarondo/brian-email
     repo: aldarondo/brian-email
-    ghcr_migration_needed: true
 
   - name: brian-drive
-    image: node:20-alpine
+    image: ghcr.io/aldarondo/brian-drive
     repo: aldarondo/brian-drive
-    ghcr_migration_needed: true
 
   - name: claude-nirvana
-    image: node:20-alpine
+    image: ghcr.io/aldarondo/claude-nirvana
     repo: aldarondo/claude-nirvana
-    ghcr_migration_needed: true
 
   - name: claude-whoop
-    image: node:20-alpine
+    image: ghcr.io/aldarondo/claude-whoop
     repo: aldarondo/claude-whoop
-    ghcr_migration_needed: true
 
   - name: claude-withings
-    image: node:20-alpine
+    image: ghcr.io/aldarondo/claude-withings
     repo: aldarondo/claude-withings
-    ghcr_migration_needed: true
 
   - name: claude-walmart
-    image: node:20-alpine
+    image: ghcr.io/aldarondo/claude-walmart
     repo: aldarondo/claude-walmart
-    ghcr_migration_needed: true
 
   - name: claude-safeway
-    image: node:20-alpine
+    image: ghcr.io/aldarondo/claude-safeway
     repo: aldarondo/claude-safeway
-    ghcr_migration_needed: true
 
   - name: claude-kroger
-    image: node:20-alpine
+    image: ghcr.io/aldarondo/claude-kroger
     repo: aldarondo/claude-kroger
-    ghcr_migration_needed: true

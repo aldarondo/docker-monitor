@@ -6,25 +6,7 @@
 
 ## 🔲 Backlog
 
-### Cross-project repairs (repos not cloned locally — tracked here so they aren't lost)
-
-docker-monitor writes blocked entries to each project's ROADMAP nightly, but repos that aren't
-cloned locally won't surface those repairs. The items below are the known outstanding repairs
-so they're visible from a single place.
-
-**GHCR migration needed** — 8 containers still use base images; `no-ghcr-image` is written to
-their ROADMAPs on every docker-monitor run. For each: clone repo, add `Dockerfile`, create
-`.github/workflows/build.yml` using the `/new-project` step 2h3 template (cloudflared + CF
-service token via `create-access-service-token.mjs`), deploy to NAS.
-
-- [ ] `[Code]` Migrate `brian-email` (aldarondo/brian-email)
-- [ ] `[Code]` Migrate `brian-drive` (aldarondo/brian-drive)
-- [ ] `[Code]` Migrate `claude-nirvana` (aldarondo/claude-nirvana)
-- [ ] `[Code]` Migrate `claude-whoop` (aldarondo/claude-whoop)
-- [ ] `[Code]` Migrate `claude-withings` (aldarondo/claude-withings)
-- [ ] `[Code]` Migrate `claude-walmart` (aldarondo/claude-walmart)
-- [ ] `[Code]` Migrate `claude-safeway` (aldarondo/claude-safeway)
-- [ ] `[Code]` Migrate `claude-kroger` (aldarondo/claude-kroger)
+<!-- nothing pending -->
 
 ## ✅ Completed
 - 2026-04-20 — Project scaffolded: README, CLAUDE.md, ROADMAP.md, tests/, GitHub repo, Synology deploy key
@@ -36,6 +18,7 @@ service token via `create-access-service-token.mjs`), deploy to NAS.
 - 2026-04-20 — GHCR image built and pushed to `ghcr.io/aldarondo/docker-monitor:latest`
 - 2026-04-21 — Cloudflare Tunnel `nas-ssh` deployed (`cloudflared-nas-ssh` container on NAS); all 7 GHCR repos updated to use `cloudflared access ssh --id/--secret` + individual service tokens via `create-access-service-token.mjs`
 - 2026-04-21 — Added `checks/deploy_config.py` (flags appleboy/ssh-action and hardcoded LAN IPs) and `checks/deploy_secrets.py` (flags missing NAS_SSH_PASSWORD/CF_ACCESS_CLIENT_ID/CF_ACCESS_CLIENT_SECRET); 9 new unit tests passing
+- 2026-04-23 — GHCR migration complete for all 8 containers: `brian-email`, `brian-drive`, `claude-nirvana`, `claude-whoop`, `claude-withings`, `claude-walmart`, `claude-safeway`, `claude-kroger` — each got Dockerfile (node:22-alpine), build.yml (CF service token deploy), updated docker-compose.yml, individual CF Access service tokens, and `NAS_SSH_PASSWORD` set; `containers.yaml` updated to remove `ghcr_migration_needed` flags
 
 ## 🚫 Blocked
 
