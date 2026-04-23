@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-04-22T08:00:01.770242+00:00",
+  "timestamp": "2026-04-23T05:07:47.735397+00:00",
   "containers": [
     {
-      "name": "enphase-juicebox-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
+      "name": "juicebox-mcp",
+      "image": "ghcr.io/aldarondo/claude-juicebox-mcp:latest",
       "running": true
     },
     {
@@ -12,8 +12,8 @@
       "running": true
     },
     {
-      "name": "juicebox-mcp",
-      "image": "ghcr.io/aldarondo/claude-juicebox-mcp:latest",
+      "name": "juicebox-mosquitto",
+      "image": "eclipse-mosquitto:2",
       "running": true
     },
     {
@@ -22,13 +22,28 @@
       "running": true
     },
     {
-      "name": "juicebox-mosquitto",
-      "image": "eclipse-mosquitto:2",
+      "name": "brian-email",
+      "image": "ghcr.io/aldarondo/brian-email:latest",
       "running": true
     },
     {
-      "name": "claude-monarch",
-      "image": "ghcr.io/aldarondo/claude-monarch:latest",
+      "name": "enphase-juicebox-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
+      "running": true
+    },
+    {
+      "name": "brian-telegram",
+      "image": "ghcr.io/aldarondo/brian-telegram:latest",
+      "running": true
+    },
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
+    {
+      "name": "claude-nirvana",
+      "image": "node:20-alpine",
       "running": true
     },
     {
@@ -37,8 +52,8 @@
       "running": true
     },
     {
-      "name": "brian-email",
-      "image": "ghcr.io/aldarondo/brian-email:latest",
+      "name": "claude-monarch",
+      "image": "ghcr.io/aldarondo/claude-monarch:latest",
       "running": true
     },
     {
@@ -69,42 +84,37 @@
     {
       "name": "radarr",
       "image": "lscr.io/linuxserver/radarr:latest",
-      "running": true
+      "running": false
     },
     {
       "name": "prowlarr",
       "image": "lscr.io/linuxserver/prowlarr:latest",
-      "running": true
-    },
-    {
-      "name": "claude-nirvana",
-      "image": "node:20-alpine",
-      "running": true
+      "running": false
     },
     {
       "name": "claude-safeway",
       "image": "node:20-alpine",
-      "running": true
+      "running": false
     },
     {
       "name": "claude-walmart",
       "image": "node:20-alpine",
-      "running": true
+      "running": false
     },
     {
       "name": "claude-kroger",
       "image": "node:20-alpine",
-      "running": true
+      "running": false
     },
     {
       "name": "claude-whoop",
       "image": "node:20-alpine",
-      "running": true
+      "running": false
     },
     {
       "name": "claude-withings",
       "image": "node:20-alpine",
-      "running": true
+      "running": false
     },
     {
       "name": "brian-drive",
@@ -112,19 +122,9 @@
       "running": false
     },
     {
-      "name": "brian-telegram",
-      "image": "ghcr.io/aldarondo/brian-telegram:latest",
-      "running": true
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": true
-    },
-    {
       "name": "brian-mcp-tunnel",
       "image": "cloudflare/cloudflared:latest",
-      "running": true
+      "running": false
     },
     {
       "name": "dyrnq-open-webui-1",
