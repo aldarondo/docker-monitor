@@ -50,7 +50,7 @@ def _load_container_status() -> set[str] | None:
     Returns set of running container names, or None if both sources are unavailable.
     Errors are written to docker-monitor's own ROADMAP.md.
     """
-    if os.path.exists("/var/run/docker.sock"):
+    if os.environ.get("USE_DOCKER_SOCKET") == "true":
         try:
             live = synology.get_running_containers()
             running = {c["name"] for c in live if c["running"]}

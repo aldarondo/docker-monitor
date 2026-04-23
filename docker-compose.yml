@@ -5,5 +5,6 @@ services:
     restart: unless-stopped
     environment:
       - GH_PAT=${GH_PAT}
+      - USE_DOCKER_SOCKET=true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

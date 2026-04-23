@@ -66,6 +66,12 @@ def test_full_run_failed_deploy_and_migration(mock_client_cls, mock_load_config)
 
     http_client = mock_client_cls.return_value.__enter__.return_value
 
+    all_secrets = {"secrets": [
+        {"name": "NAS_SSH_PASSWORD"},
+        {"name": "CF_ACCESS_CLIENT_ID"},
+        {"name": "CF_ACCESS_CLIENT_SECRET"},
+    ]}
+
     http_client.get.side_effect = [
         # 1. _load_container_status: get_status_from_repo → get_file(container_status.json)
         _make_resp(container_status_file),
@@ -79,13 +85,23 @@ def test_full_run_failed_deploy_and_migration(mock_client_cls, mock_load_config)
         _make_resp(roadmap_file),
         # 6. weekly_schedule: get_workflow_paths
         _make_resp(workflow_listing),
-        # 7. weekly_schedule: get_file_content → workflow with schedule:
+        # 7. weekly_schedule: get_file_content → workflow with schedule
         _make_resp(workflow_content),
         # 8. roadmap.clear_blocked(no-weekly-schedule): get_file → no match
         _make_resp(no_entry),
-        # 9. container_status.run(brian-drive) → clear_blocked(container-stopped) → no match
+        # 9. deploy_config: get_workflow_paths
+        _make_resp(workflow_listing),
+        # 10. deploy_config: get_file_content → clean workflow (no bad patterns)
+        _make_resp(workflow_content),
+        # 11. deploy_config: roadmap.clear_blocked(bad-deploy-config) → no match
         _make_resp(no_entry),
-        # 10. ghcr_migration: roadmap.write_blocked → get_file(brian-drive ROADMAP)
+        # 12. deploy_secrets: list_secrets → all required secrets present
+        _make_resp(all_secrets),
+        # 13. deploy_secrets: roadmap.clear_blocked(missing-deploy-secrets) → no match
+        _make_resp(no_entry),
+        # 14. container_status.run(brian-drive) → clear_blocked(container-stopped) → no match
+        _make_resp(no_entry),
+        # 15. ghcr_migration: roadmap.write_blocked → get_file(brian-drive ROADMAP)
         _make_resp(roadmap_drive),
     ]
     http_client.put.return_value = _make_resp({})
