@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-23T05:07:47.735397+00:00",
+  "timestamp": "2026-04-23T08:00:00.946833+00:00",
   "containers": [
     {
       "name": "juicebox-mcp",
@@ -9,7 +9,7 @@
     {
       "name": "juicepassproxy",
       "image": "ghcr.io/aldarondo/claude-juicebox-juicepassproxy:latest",
-      "running": true
+      "running": false
     },
     {
       "name": "juicebox-mosquitto",
@@ -84,37 +84,37 @@
     {
       "name": "radarr",
       "image": "lscr.io/linuxserver/radarr:latest",
-      "running": false
+      "running": true
     },
     {
       "name": "prowlarr",
       "image": "lscr.io/linuxserver/prowlarr:latest",
-      "running": false
+      "running": true
     },
     {
       "name": "claude-safeway",
       "image": "node:20-alpine",
-      "running": false
+      "running": true
     },
     {
       "name": "claude-walmart",
       "image": "node:20-alpine",
-      "running": false
+      "running": true
     },
     {
       "name": "claude-kroger",
       "image": "node:20-alpine",
-      "running": false
+      "running": true
     },
     {
       "name": "claude-whoop",
       "image": "node:20-alpine",
-      "running": false
+      "running": true
     },
     {
       "name": "claude-withings",
       "image": "node:20-alpine",
-      "running": false
+      "running": true
     },
     {
       "name": "brian-drive",
@@ -124,7 +124,7 @@
     {
       "name": "brian-mcp-tunnel",
       "image": "cloudflare/cloudflared:latest",
-      "running": false
+      "running": true
     },
     {
       "name": "dyrnq-open-webui-1",
