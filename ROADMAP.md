@@ -21,5 +21,6 @@
 - 2026-04-23 — GHCR migration complete for all 8 containers: `brian-email`, `brian-drive`, `claude-nirvana`, `claude-whoop`, `claude-withings`, `claude-walmart`, `claude-safeway`, `claude-kroger` — each got Dockerfile (node:22-alpine), build.yml (CF service token deploy), updated docker-compose.yml, individual CF Access service tokens, and `NAS_SSH_PASSWORD` set; `containers.yaml` updated to remove `ghcr_migration_needed` flags
 
 ## 🚫 Blocked
+- ❌ [docker-monitor:nas-status-stale] container_status.json is 12.8h old (limit 2h) — NAS container may have stopped — 2026-04-23 21:28 UTC
 
 <!-- log blockers here -->
