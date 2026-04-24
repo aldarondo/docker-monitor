@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-04-23T21:30:47.471556+00:00",
+  "timestamp": "2026-04-24T08:00:01.160835+00:00",
   "containers": [
     {
-      "name": "docker-monitor",
-      "image": "ghcr.io/aldarondo/docker-monitor:latest",
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
       "running": true
     },
     {
@@ -14,6 +14,11 @@
     {
       "name": "enphase-mcp",
       "image": "ghcr.io/aldarondo/enphase-mcp:latest",
+      "running": true
+    },
+    {
+      "name": "docker-monitor",
+      "image": "ghcr.io/aldarondo/docker-monitor:latest",
       "running": true
     },
     {
@@ -34,11 +39,6 @@
     {
       "name": "juicepassproxy",
       "image": "ghcr.io/aldarondo/claude-juicebox-juicepassproxy:latest",
-      "running": true
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
       "running": true
     },
     {
