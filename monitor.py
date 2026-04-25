@@ -26,7 +26,7 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
 
 from lib import synology
-from checks import deploy_status, weekly_schedule, ghcr_migration, container_status, deploy_config, deploy_secrets
+from checks import deploy_status, weekly_schedule, ghcr_migration, container_status, deploy_config, deploy_secrets, image_cleanup
 
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), "config", "containers.yaml")
 
@@ -96,6 +96,10 @@ def _push_container_status(containers: list[dict]) -> None:
 
 def run_checks() -> None:
     print("=== docker-monitor run ===")
+
+    if os.environ.get("USE_DOCKER_SOCKET") == "true":
+        image_cleanup.run()
+
     entries = load_config()
     running = _load_container_status()  # None if status unavailable
 
