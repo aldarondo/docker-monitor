@@ -1,5 +1,4 @@
 # All features require unit + integration tests before a task is marked complete.
-import pytest
 from unittest.mock import patch, MagicMock
 from lib import roadmap
 

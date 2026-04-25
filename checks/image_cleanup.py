@@ -41,6 +41,6 @@ def run() -> None:
         if count:
             print(f"  image-cleanup: removed {count} dangling image(s), freed {mb:.1f} MB total")
         else:
-            print(f"  image-cleanup: no dangling images")
+            print("  image-cleanup: no dangling images")
     except Exception as exc:
         print(f"  image-cleanup: image prune failed — {exc}")

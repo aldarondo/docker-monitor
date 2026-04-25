@@ -28,7 +28,7 @@ def run(entry: dict) -> None:
     present = github.list_secrets(repo)
     if not present:
         # Empty set could mean 403 (insufficient scope) — skip rather than false-positive
-        print(f"    skipped — could not read secrets (insufficient PAT scope?)")
+        print("    skipped — could not read secrets (insufficient PAT scope?)")
         return
 
     missing = [s for s in REQUIRED_SECRETS if s not in present]
@@ -41,4 +41,4 @@ def run(entry: dict) -> None:
         print(f"    missing: {missing}")
     else:
         roadmap.clear_blocked(repo, CHECK)
-        print(f"    ok — all required secrets present")
+        print("    ok — all required secrets present")

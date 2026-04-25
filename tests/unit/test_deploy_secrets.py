@@ -1,6 +1,5 @@
 """Unit tests for checks/deploy_secrets.py."""
 import os
-import pytest
 from unittest.mock import patch
 
 os.environ.setdefault("GH_PAT", "test-token")

@@ -1,6 +1,5 @@
 # All features require unit + integration tests before a task is marked complete.
-import pytest
-from unittest.mock import patch, MagicMock, call
+from unittest.mock import patch
 from checks import container_status
 
 

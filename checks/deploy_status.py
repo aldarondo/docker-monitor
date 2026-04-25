@@ -15,7 +15,7 @@ def run(entry: dict) -> None:
 
     run_data = github.get_latest_workflow_run(repo)
     if not run_data:
-        print(f"    no workflow runs found — skipping")
+        print("    no workflow runs found — skipping")
         return
 
     status = run_data.get("status", "")

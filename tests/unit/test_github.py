@@ -1,7 +1,6 @@
 """Unit tests for lib/github.py — status parsing from API responses."""
 import base64
 import os
-import pytest
 from unittest.mock import MagicMock, patch
 
 os.environ.setdefault("GH_PAT", "test-token")

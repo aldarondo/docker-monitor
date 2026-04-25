@@ -10,7 +10,6 @@ Environment variable required:
   GH_PAT  — GitHub PAT (repo + contents:write scope)
 """
 
-import base64
 import json
 import os
 import sys
