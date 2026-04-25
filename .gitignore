@@ -32,3 +32,4 @@ Thumbs.db
 .vscode/settings.json
 .idea/workspace.xml
 .githooks/
+.claude/
