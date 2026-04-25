@@ -9,7 +9,6 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./logs:/app/logs
-    command: sh -c "python monitor.py 2>&1 | tee -a /app/logs/app.log"
     logging:
       driver: "json-file"
       options:
