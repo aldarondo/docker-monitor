@@ -1,24 +1,9 @@
 {
-  "timestamp": "2026-04-24T08:00:01.160835+00:00",
+  "timestamp": "2026-04-25T08:00:00.985033+00:00",
   "containers": [
     {
       "name": "brian-mcp-memory",
       "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": true
-    },
-    {
-      "name": "claude-withings",
-      "image": "ghcr.io/aldarondo/claude-withings:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-mcp",
-      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
-      "running": true
-    },
-    {
-      "name": "docker-monitor",
-      "image": "ghcr.io/aldarondo/docker-monitor:latest",
       "running": true
     },
     {
@@ -27,13 +12,28 @@
       "running": true
     },
     {
+      "name": "enphase-mcp",
+      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
+      "running": true
+    },
+    {
+      "name": "claude-withings",
+      "image": "ghcr.io/aldarondo/claude-withings:latest",
+      "running": true
+    },
+    {
+      "name": "claude-nirvana",
+      "image": "ghcr.io/aldarondo/claude-nirvana:latest",
+      "running": true
+    },
+    {
       "name": "enphase-nirvana-coordinator",
       "image": "ghcr.io/aldarondo/enphase-nirvana-coordinator:latest",
       "running": true
     },
     {
-      "name": "claude-nirvana",
-      "image": "node:20-alpine",
+      "name": "docker-monitor",
+      "image": "ghcr.io/aldarondo/docker-monitor:latest",
       "running": true
     },
     {
