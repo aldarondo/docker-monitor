@@ -21,29 +21,13 @@ Set RUN_ONCE=true to run a single check and exit (useful for testing).
 """
 
 import logging
-import logging.handlers
 import os
-import pathlib
 import yaml
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
 
-def _setup_file_logging() -> None:
-    log_dir = pathlib.Path(os.environ.get("LOG_DIR", "/app/logs"))
-    log_dir.mkdir(parents=True, exist_ok=True)
-    fmt = logging.Formatter("%(asctime)s  %(levelname)-7s  %(message)s", datefmt="%Y-%m-%d %H:%M:%S")
-    root = logging.getLogger()
-    root.setLevel(os.environ.get("LOG_LEVEL", "INFO"))
-    sh = logging.StreamHandler()
-    sh.setFormatter(fmt)
-    root.addHandler(sh)
-    fh = logging.handlers.RotatingFileHandler(
-        log_dir / "app.log", maxBytes=10 * 1024 * 1024, backupCount=5, encoding="utf-8",
-    )
-    fh.setFormatter(fmt)
-    root.addHandler(fh)
-
-_setup_file_logging()
+from lib import logger as _logger
+_logger.setup()
 log = logging.getLogger("docker-monitor")
 
 from lib import synology
