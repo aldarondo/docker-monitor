@@ -16,7 +16,7 @@ def run(entry: dict) -> None:
 
     if image.startswith("ghcr.io/aldarondo/"):
         roadmap.clear_blocked(repo, CHECK)
-        print(f"    already on GHCR")
+        print("    already on GHCR")
     else:
         roadmap.write_blocked(
             repo,

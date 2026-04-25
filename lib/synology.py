@@ -11,7 +11,6 @@ Fallback path (running in GitHub Actions):
 """
 
 import json
-import os
 from datetime import datetime, timezone, timedelta
 
 STATUS_STALE_HOURS = 26  # monitor runs daily at 08:00 UTC; 26h gives a 2h buffer

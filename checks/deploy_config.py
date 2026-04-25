@@ -38,4 +38,4 @@ def run(entry: dict) -> None:
                 return
 
     roadmap.clear_blocked(repo, CHECK)
-    print(f"    ok — no bad patterns found")
+    print("    ok — no bad patterns found")

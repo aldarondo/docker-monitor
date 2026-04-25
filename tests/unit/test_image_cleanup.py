@@ -1,4 +1,3 @@
-import pytest
 from unittest.mock import patch, MagicMock
 from checks import image_cleanup
 

@@ -1,11 +1,10 @@
 """Unit tests for checks/deploy_config.py."""
 import os
-import pytest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 
 os.environ.setdefault("GH_PAT", "test-token")
 
-from checks.deploy_config import run, BAD_PATTERNS
+from checks.deploy_config import run
 
 ENTRY = {"name": "my-container", "repo": "aldarondo/my-repo"}
 CLEAN_WORKFLOW = "on:\n  push:\nsteps:\n  - uses: docker/build-push-action@v5\n"
