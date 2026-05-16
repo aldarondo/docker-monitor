@@ -1,24 +1,24 @@
 {
-  "timestamp": "2026-04-25T08:00:00.985033+00:00",
+  "timestamp": "2026-05-16T08:00:03.224058+00:00",
   "containers": [
     {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "name": "jellyfin-mcp",
+      "image": "ghcr.io/aldarondo/jellyfin-mcp:latest",
       "running": true
     },
     {
-      "name": "enphase-juicebox-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
+      "name": "radarr",
+      "image": "lscr.io/linuxserver/radarr:latest",
       "running": true
     },
     {
-      "name": "enphase-mcp",
-      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
+      "name": "sonarr",
+      "image": "lscr.io/linuxserver/sonarr:latest",
       "running": true
     },
     {
-      "name": "claude-withings",
-      "image": "ghcr.io/aldarondo/claude-withings:latest",
+      "name": "prowlarr",
+      "image": "lscr.io/linuxserver/prowlarr:latest",
       "running": true
     },
     {
@@ -27,33 +27,8 @@
       "running": true
     },
     {
-      "name": "enphase-nirvana-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-nirvana-coordinator:latest",
-      "running": true
-    },
-    {
-      "name": "docker-monitor",
-      "image": "ghcr.io/aldarondo/docker-monitor:latest",
-      "running": true
-    },
-    {
-      "name": "juicepassproxy",
-      "image": "ghcr.io/aldarondo/claude-juicebox-juicepassproxy:latest",
-      "running": true
-    },
-    {
-      "name": "juicebox-mcp",
-      "image": "ghcr.io/aldarondo/claude-juicebox-mcp:latest",
-      "running": true
-    },
-    {
-      "name": "juicebox-mosquitto",
-      "image": "eclipse-mosquitto:2",
-      "running": true
-    },
-    {
-      "name": "juicebox-dns",
-      "image": "andyshinn/dnsmasq:latest",
+      "name": "brian-drive",
+      "image": "ghcr.io/aldarondo/brian-drive:latest",
       "running": true
     },
     {
@@ -62,13 +37,78 @@
       "running": true
     },
     {
+      "name": "claude-withings-tunnel",
+      "image": "cloudflare/cloudflared:latest",
+      "running": true
+    },
+    {
+      "name": "claude-withings",
+      "image": "ghcr.io/aldarondo/claude-withings:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-nirvana-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-nirvana-coordinator:latest",
+      "running": true
+    },
+    {
       "name": "brian-telegram",
       "image": "ghcr.io/aldarondo/brian-telegram:latest",
       "running": true
     },
     {
+      "name": "enphase-juicebox-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
+      "running": true
+    },
+    {
       "name": "claude-monarch",
       "image": "ghcr.io/aldarondo/claude-monarch:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-mcp",
+      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
+      "running": true
+    },
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
+    {
+      "name": "juicebox-mcp",
+      "image": "ghcr.io/aldarondo/claude-juicebox-mcp:latest",
+      "running": true
+    },
+    {
+      "name": "juicepassproxy",
+      "image": "ghcr.io/aldarondo/claude-juicebox-juicepassproxy:latest",
+      "running": true
+    },
+    {
+      "name": "juicebox-dns",
+      "image": "andyshinn/dnsmasq:latest",
+      "running": true
+    },
+    {
+      "name": "juicebox-mosquitto",
+      "image": "eclipse-mosquitto:2.0.21",
+      "running": true
+    },
+    {
+      "name": "nirvana-proxy",
+      "image": "ghcr.io/aldarondo/nirvana-proxy:latest",
+      "running": true
+    },
+    {
+      "name": "nirvana-capture",
+      "image": "nirvana-capture-nirvana-capture:latest",
+      "running": false
+    },
+    {
+      "name": "docker-monitor",
+      "image": "ghcr.io/aldarondo/docker-monitor:latest",
       "running": true
     },
     {
@@ -79,26 +119,6 @@
     {
       "name": "synology-whisper",
       "image": "ghcr.io/aldarondo/synology-whisper:latest",
-      "running": true
-    },
-    {
-      "name": "jellyfin-mcp",
-      "image": "ghcr.io/aldarondo/jellyfin-mcp:latest",
-      "running": true
-    },
-    {
-      "name": "sonarr",
-      "image": "lscr.io/linuxserver/sonarr:latest",
-      "running": true
-    },
-    {
-      "name": "radarr",
-      "image": "lscr.io/linuxserver/radarr:latest",
-      "running": true
-    },
-    {
-      "name": "prowlarr",
-      "image": "lscr.io/linuxserver/prowlarr:latest",
       "running": true
     },
     {
@@ -120,11 +140,6 @@
       "name": "claude-whoop",
       "image": "node:20-alpine",
       "running": true
-    },
-    {
-      "name": "brian-drive",
-      "image": "node:20-alpine",
-      "running": false
     },
     {
       "name": "brian-mcp-tunnel",
