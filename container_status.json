@@ -1,51 +1,6 @@
 {
-  "timestamp": "2026-05-17T08:00:01.651964+00:00",
+  "timestamp": "2026-05-18T08:00:02.121864+00:00",
   "containers": [
-    {
-      "name": "jellyfin-mcp",
-      "image": "ghcr.io/aldarondo/jellyfin-mcp:latest",
-      "running": true
-    },
-    {
-      "name": "brian-telegram",
-      "image": "ghcr.io/aldarondo/brian-telegram:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-juicebox-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
-      "running": true
-    },
-    {
-      "name": "claude-monarch",
-      "image": "ghcr.io/aldarondo/claude-monarch:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-mcp",
-      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
-      "running": true
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": true
-    },
-    {
-      "name": "radarr",
-      "image": "lscr.io/linuxserver/radarr:latest",
-      "running": true
-    },
-    {
-      "name": "sonarr",
-      "image": "lscr.io/linuxserver/sonarr:latest",
-      "running": true
-    },
-    {
-      "name": "prowlarr",
-      "image": "lscr.io/linuxserver/prowlarr:latest",
-      "running": true
-    },
     {
       "name": "claude-nirvana",
       "image": "ghcr.io/aldarondo/claude-nirvana:latest",
@@ -74,6 +29,51 @@
     {
       "name": "enphase-nirvana-coordinator",
       "image": "ghcr.io/aldarondo/enphase-nirvana-coordinator:latest",
+      "running": true
+    },
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
+    {
+      "name": "jellyfin-mcp",
+      "image": "ghcr.io/aldarondo/jellyfin-mcp:latest",
+      "running": true
+    },
+    {
+      "name": "brian-telegram",
+      "image": "ghcr.io/aldarondo/brian-telegram:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-juicebox-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
+      "running": true
+    },
+    {
+      "name": "claude-monarch",
+      "image": "ghcr.io/aldarondo/claude-monarch:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-mcp",
+      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
+      "running": true
+    },
+    {
+      "name": "radarr",
+      "image": "lscr.io/linuxserver/radarr:latest",
+      "running": true
+    },
+    {
+      "name": "sonarr",
+      "image": "lscr.io/linuxserver/sonarr:latest",
+      "running": true
+    },
+    {
+      "name": "prowlarr",
+      "image": "lscr.io/linuxserver/prowlarr:latest",
       "running": true
     },
     {
@@ -113,7 +113,7 @@
     },
     {
       "name": "cloudflared-nas-ssh",
-      "image": "cloudflare/cloudflared:latest",
+      "image": "sha256:c1d35",
       "running": true
     },
     {
@@ -143,7 +143,7 @@
     },
     {
       "name": "brian-mcp-tunnel",
-      "image": "cloudflare/cloudflared:latest",
+      "image": "sha256:c1d35",
       "running": true
     },
     {
