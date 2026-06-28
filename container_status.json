@@ -1,15 +1,30 @@
 {
-  "timestamp": "2026-06-27T08:00:00.632124+00:00",
+  "timestamp": "2026-06-28T08:00:01.069799+00:00",
   "containers": [
+    {
+      "name": "brian-telegram",
+      "image": "ghcr.io/aldarondo/brian-telegram:latest",
+      "running": true
+    },
     {
       "name": "enphase-juicebox-coordinator",
       "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
       "running": true
     },
     {
+      "name": "claude-monarch",
+      "image": "ghcr.io/aldarondo/claude-monarch:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-mcp",
+      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
+      "running": true
+    },
+    {
       "name": "brian-mcp-memory",
       "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": true
+      "running": false
     },
     {
       "name": "brian-drive",
@@ -34,21 +49,6 @@
     {
       "name": "enphase-nirvana-coordinator",
       "image": "ghcr.io/aldarondo/enphase-nirvana-coordinator:latest",
-      "running": true
-    },
-    {
-      "name": "brian-telegram",
-      "image": "ghcr.io/aldarondo/brian-telegram:latest",
-      "running": true
-    },
-    {
-      "name": "claude-monarch",
-      "image": "ghcr.io/aldarondo/claude-monarch:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-mcp",
-      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
       "running": true
     },
     {
