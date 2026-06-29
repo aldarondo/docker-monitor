@@ -1,34 +1,14 @@
 {
-  "timestamp": "2026-06-28T08:00:01.069799+00:00",
+  "timestamp": "2026-06-29T08:00:01.156875+00:00",
   "containers": [
-    {
-      "name": "brian-telegram",
-      "image": "ghcr.io/aldarondo/brian-telegram:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-juicebox-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
-      "running": true
-    },
-    {
-      "name": "claude-monarch",
-      "image": "ghcr.io/aldarondo/claude-monarch:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-mcp",
-      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
-      "running": true
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": false
-    },
     {
       "name": "brian-drive",
       "image": "ghcr.io/aldarondo/brian-drive:latest",
+      "running": true
+    },
+    {
+      "name": "claude-nirvana",
+      "image": "ghcr.io/aldarondo/claude-nirvana:latest",
       "running": true
     },
     {
@@ -53,7 +33,12 @@
     },
     {
       "name": "jellyfin-mcp",
-      "image": "sha256:4e4db",
+      "image": "ghcr.io/aldarondo/jellyfin-mcp:latest",
+      "running": true
+    },
+    {
+      "name": "sonarr",
+      "image": "lscr.io/linuxserver/sonarr:latest",
       "running": true
     },
     {
@@ -67,13 +52,28 @@
       "running": true
     },
     {
-      "name": "sonarr",
-      "image": "lscr.io/linuxserver/sonarr:latest",
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": false
+    },
+    {
+      "name": "brian-telegram",
+      "image": "ghcr.io/aldarondo/brian-telegram:latest",
       "running": true
     },
     {
-      "name": "claude-nirvana",
-      "image": "ghcr.io/aldarondo/claude-nirvana:latest",
+      "name": "enphase-juicebox-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
+      "running": true
+    },
+    {
+      "name": "claude-monarch",
+      "image": "ghcr.io/aldarondo/claude-monarch:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-mcp",
+      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
       "running": true
     },
     {
