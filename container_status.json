@@ -1,6 +1,11 @@
 {
-  "timestamp": "2026-06-29T08:00:01.156875+00:00",
+  "timestamp": "2026-06-30T08:00:00.680577+00:00",
   "containers": [
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": false
+    },
     {
       "name": "brian-drive",
       "image": "ghcr.io/aldarondo/brian-drive:latest",
@@ -50,11 +55,6 @@
       "name": "radarr",
       "image": "lscr.io/linuxserver/radarr:latest",
       "running": true
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": false
     },
     {
       "name": "brian-telegram",
