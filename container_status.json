@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-07-09T08:00:01.173016+00:00",
+  "timestamp": "2026-07-09T13:58:41.690098+00:00",
   "containers": [
     {
       "name": "brian-mcp-memory",
@@ -129,22 +129,22 @@
     {
       "name": "claude-walmart",
       "image": "node:20-alpine",
-      "running": true
+      "running": false
     },
     {
       "name": "claude-kroger",
       "image": "node:20-alpine",
-      "running": true
+      "running": false
     },
     {
       "name": "claude-whoop",
       "image": "node:20-alpine",
-      "running": true
+      "running": false
     },
     {
       "name": "brian-mcp-tunnel",
       "image": "sha256:c1d35",
-      "running": true
+      "running": false
     },
     {
       "name": "dyrnq-open-webui-1",
