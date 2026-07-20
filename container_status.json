@@ -1,26 +1,6 @@
 {
-  "timestamp": "2026-07-19T08:00:00.610639+00:00",
+  "timestamp": "2026-07-20T08:00:01.168582+00:00",
   "containers": [
-    {
-      "name": "enphase-juicebox-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
-      "running": true
-    },
-    {
-      "name": "claude-monarch",
-      "image": "ghcr.io/aldarondo/claude-monarch:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-mcp",
-      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
-      "running": true
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": true
-    },
     {
       "name": "brian-drive",
       "image": "ghcr.io/aldarondo/brian-drive:latest",
@@ -52,6 +32,11 @@
       "running": true
     },
     {
+      "name": "radarr",
+      "image": "lscr.io/linuxserver/radarr:latest",
+      "running": true
+    },
+    {
       "name": "sonarr",
       "image": "lscr.io/linuxserver/sonarr:latest",
       "running": true
@@ -62,13 +47,28 @@
       "running": true
     },
     {
-      "name": "radarr",
-      "image": "lscr.io/linuxserver/radarr:latest",
+      "name": "brian-telegram",
+      "image": "ghcr.io/aldarondo/brian-telegram:latest",
       "running": true
     },
     {
-      "name": "brian-telegram",
-      "image": "ghcr.io/aldarondo/brian-telegram:latest",
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-juicebox-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
+      "running": true
+    },
+    {
+      "name": "claude-monarch",
+      "image": "ghcr.io/aldarondo/claude-monarch:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-mcp",
+      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
       "running": true
     },
     {
