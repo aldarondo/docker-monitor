@@ -1,24 +1,9 @@
 {
-  "timestamp": "2026-07-26T08:00:00.737842+00:00",
+  "timestamp": "2026-07-27T08:00:01.058661+00:00",
   "containers": [
     {
-      "name": "enphase-juicebox-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
-      "running": true
-    },
-    {
-      "name": "claude-monarch",
-      "image": "ghcr.io/aldarondo/claude-monarch:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-mcp",
-      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
-      "running": true
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "name": "claude-nirvana",
+      "image": "ghcr.io/aldarondo/claude-nirvana:latest",
       "running": true
     },
     {
@@ -52,18 +37,13 @@
       "running": true
     },
     {
-      "name": "radarr",
-      "image": "lscr.io/linuxserver/radarr:latest",
-      "running": true
-    },
-    {
-      "name": "sonarr",
-      "image": "lscr.io/linuxserver/sonarr:latest",
-      "running": true
-    },
-    {
       "name": "prowlarr",
       "image": "lscr.io/linuxserver/prowlarr:latest",
+      "running": true
+    },
+    {
+      "name": "radarr",
+      "image": "lscr.io/linuxserver/radarr:latest",
       "running": true
     },
     {
@@ -72,8 +52,28 @@
       "running": true
     },
     {
-      "name": "claude-nirvana",
-      "image": "ghcr.io/aldarondo/claude-nirvana:latest",
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-juicebox-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
+      "running": true
+    },
+    {
+      "name": "claude-monarch",
+      "image": "ghcr.io/aldarondo/claude-monarch:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-mcp",
+      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
+      "running": true
+    },
+    {
+      "name": "sonarr",
+      "image": "lscr.io/linuxserver/sonarr:latest",
       "running": true
     },
     {
