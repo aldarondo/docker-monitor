@@ -1,6 +1,11 @@
 {
-  "timestamp": "2026-07-27T08:00:01.058661+00:00",
+  "timestamp": "2026-07-28T08:00:00.741178+00:00",
   "containers": [
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
     {
       "name": "claude-nirvana",
       "image": "ghcr.io/aldarondo/claude-nirvana:latest",
@@ -49,11 +54,6 @@
     {
       "name": "brian-telegram",
       "image": "ghcr.io/aldarondo/brian-telegram:latest",
-      "running": true
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
       "running": true
     },
     {
