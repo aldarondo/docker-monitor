@@ -1,26 +1,6 @@
 {
-  "timestamp": "2026-08-02T08:00:00.981469+00:00",
+  "timestamp": "2026-08-03T08:00:00.744113+00:00",
   "containers": [
-    {
-      "name": "enphase-juicebox-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
-      "running": false
-    },
-    {
-      "name": "claude-monarch",
-      "image": "ghcr.io/aldarondo/claude-monarch:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-mcp",
-      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
-      "running": false
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": true
-    },
     {
       "name": "claude-nirvana",
       "image": "ghcr.io/aldarondo/claude-nirvana:latest",
@@ -49,11 +29,36 @@
     {
       "name": "enphase-nirvana-coordinator",
       "image": "ghcr.io/aldarondo/enphase-nirvana-coordinator:latest",
-      "running": true
+      "running": false
     },
     {
       "name": "jellyfin-mcp",
       "image": "ghcr.io/aldarondo/jellyfin-mcp:latest",
+      "running": true
+    },
+    {
+      "name": "brian-telegram",
+      "image": "ghcr.io/aldarondo/brian-telegram:latest",
+      "running": true
+    },
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-mcp",
+      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
+      "running": false
+    },
+    {
+      "name": "enphase-juicebox-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
+      "running": false
+    },
+    {
+      "name": "claude-monarch",
+      "image": "ghcr.io/aldarondo/claude-monarch:latest",
       "running": true
     },
     {
@@ -64,11 +69,6 @@
     {
       "name": "radarr",
       "image": "lscr.io/linuxserver/radarr:latest",
-      "running": true
-    },
-    {
-      "name": "brian-telegram",
-      "image": "ghcr.io/aldarondo/brian-telegram:latest",
       "running": true
     },
     {
