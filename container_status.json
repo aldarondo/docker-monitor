@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-08-04T08:00:00.611455+00:00",
+  "timestamp": "2026-08-05T08:00:01.107761+00:00",
   "containers": [
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": true
-    },
     {
       "name": "enphase-mcp",
       "image": "ghcr.io/aldarondo/enphase-mcp:latest",
       "running": false
+    },
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
     },
     {
       "name": "claude-nirvana",
