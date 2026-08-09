@@ -1,14 +1,59 @@
 {
-  "timestamp": "2026-08-06T08:00:01.624207+00:00",
+  "timestamp": "2026-08-09T08:00:01.160780+00:00",
   "containers": [
+    {
+      "name": "jellyfin-mcp",
+      "image": "ghcr.io/aldarondo/jellyfin-mcp:latest",
+      "running": true
+    },
+    {
+      "name": "radarr",
+      "image": "lscr.io/linuxserver/radarr:latest",
+      "running": true
+    },
+    {
+      "name": "sonarr",
+      "image": "lscr.io/linuxserver/sonarr:latest",
+      "running": true
+    },
+    {
+      "name": "prowlarr",
+      "image": "lscr.io/linuxserver/prowlarr:latest",
+      "running": true
+    },
+    {
+      "name": "brian-telegram",
+      "image": "ghcr.io/aldarondo/brian-telegram:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-juicebox-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
+      "running": true
+    },
+    {
+      "name": "claude-monarch",
+      "image": "ghcr.io/aldarondo/claude-monarch:latest",
+      "running": true
+    },
     {
       "name": "enphase-mcp",
       "image": "ghcr.io/aldarondo/enphase-mcp:latest",
-      "running": false
+      "running": true
     },
     {
       "name": "brian-mcp-memory",
       "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-nirvana-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-nirvana-coordinator:latest",
+      "running": true
+    },
+    {
+      "name": "juicebox-mcp",
+      "image": "ghcr.io/aldarondo/claude-juicebox-mcp:latest",
       "running": true
     },
     {
@@ -34,51 +79,6 @@
     {
       "name": "claude-withings",
       "image": "ghcr.io/aldarondo/claude-withings:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-nirvana-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-nirvana-coordinator:latest",
-      "running": false
-    },
-    {
-      "name": "jellyfin-mcp",
-      "image": "ghcr.io/aldarondo/jellyfin-mcp:latest",
-      "running": true
-    },
-    {
-      "name": "brian-telegram",
-      "image": "ghcr.io/aldarondo/brian-telegram:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-juicebox-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-juicebox-coordinator:latest",
-      "running": false
-    },
-    {
-      "name": "claude-monarch",
-      "image": "ghcr.io/aldarondo/claude-monarch:latest",
-      "running": true
-    },
-    {
-      "name": "prowlarr",
-      "image": "lscr.io/linuxserver/prowlarr:latest",
-      "running": true
-    },
-    {
-      "name": "radarr",
-      "image": "lscr.io/linuxserver/radarr:latest",
-      "running": true
-    },
-    {
-      "name": "sonarr",
-      "image": "lscr.io/linuxserver/sonarr:latest",
-      "running": true
-    },
-    {
-      "name": "juicebox-mcp",
-      "image": "ghcr.io/aldarondo/claude-juicebox-mcp:latest",
       "running": true
     },
     {
