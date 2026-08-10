@@ -1,6 +1,41 @@
 {
-  "timestamp": "2026-08-09T08:00:01.160780+00:00",
+  "timestamp": "2026-08-10T08:00:01.175151+00:00",
   "containers": [
+    {
+      "name": "brian-drive",
+      "image": "ghcr.io/aldarondo/brian-drive:latest",
+      "running": true
+    },
+    {
+      "name": "brian-email",
+      "image": "ghcr.io/aldarondo/brian-email:latest",
+      "running": true
+    },
+    {
+      "name": "claude-withings-tunnel",
+      "image": "cloudflare/cloudflared:latest",
+      "running": true
+    },
+    {
+      "name": "claude-withings",
+      "image": "ghcr.io/aldarondo/claude-withings:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-nirvana-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-nirvana-coordinator:latest",
+      "running": true
+    },
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-mcp",
+      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
+      "running": true
+    },
     {
       "name": "jellyfin-mcp",
       "image": "ghcr.io/aldarondo/jellyfin-mcp:latest",
@@ -37,21 +72,6 @@
       "running": true
     },
     {
-      "name": "enphase-mcp",
-      "image": "ghcr.io/aldarondo/enphase-mcp:latest",
-      "running": true
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-nirvana-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-nirvana-coordinator:latest",
-      "running": true
-    },
-    {
       "name": "juicebox-mcp",
       "image": "ghcr.io/aldarondo/claude-juicebox-mcp:latest",
       "running": true
@@ -59,26 +79,6 @@
     {
       "name": "claude-nirvana",
       "image": "ghcr.io/aldarondo/claude-nirvana:latest",
-      "running": true
-    },
-    {
-      "name": "brian-drive",
-      "image": "ghcr.io/aldarondo/brian-drive:latest",
-      "running": true
-    },
-    {
-      "name": "brian-email",
-      "image": "ghcr.io/aldarondo/brian-email:latest",
-      "running": true
-    },
-    {
-      "name": "claude-withings-tunnel",
-      "image": "cloudflare/cloudflared:latest",
-      "running": true
-    },
-    {
-      "name": "claude-withings",
-      "image": "ghcr.io/aldarondo/claude-withings:latest",
       "running": true
     },
     {
