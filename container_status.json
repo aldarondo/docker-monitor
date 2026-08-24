@@ -1,6 +1,41 @@
 {
-  "timestamp": "2026-08-23T08:00:01.112292+00:00",
+  "timestamp": "2026-08-24T08:00:00.794861+00:00",
   "containers": [
+    {
+      "name": "claude-nirvana",
+      "image": "ghcr.io/aldarondo/claude-nirvana:latest",
+      "running": true
+    },
+    {
+      "name": "brian-drive",
+      "image": "ghcr.io/aldarondo/brian-drive:latest",
+      "running": true
+    },
+    {
+      "name": "brian-email",
+      "image": "ghcr.io/aldarondo/brian-email:latest",
+      "running": true
+    },
+    {
+      "name": "claude-withings-tunnel",
+      "image": "cloudflare/cloudflared:latest",
+      "running": true
+    },
+    {
+      "name": "claude-withings",
+      "image": "ghcr.io/aldarondo/claude-withings:latest",
+      "running": true
+    },
+    {
+      "name": "enphase-nirvana-coordinator",
+      "image": "ghcr.io/aldarondo/enphase-nirvana-coordinator:latest",
+      "running": true
+    },
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
     {
       "name": "jellyfin-mcp",
       "image": "ghcr.io/aldarondo/jellyfin-mcp:latest",
@@ -32,36 +67,6 @@
       "running": true
     },
     {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": true
-    },
-    {
-      "name": "brian-drive",
-      "image": "ghcr.io/aldarondo/brian-drive:latest",
-      "running": true
-    },
-    {
-      "name": "brian-email",
-      "image": "ghcr.io/aldarondo/brian-email:latest",
-      "running": true
-    },
-    {
-      "name": "claude-withings-tunnel",
-      "image": "cloudflare/cloudflared:latest",
-      "running": true
-    },
-    {
-      "name": "claude-withings",
-      "image": "ghcr.io/aldarondo/claude-withings:latest",
-      "running": true
-    },
-    {
-      "name": "enphase-nirvana-coordinator",
-      "image": "ghcr.io/aldarondo/enphase-nirvana-coordinator:latest",
-      "running": true
-    },
-    {
       "name": "radarr",
       "image": "lscr.io/linuxserver/radarr:latest",
       "running": true
@@ -74,11 +79,6 @@
     {
       "name": "juicebox-mcp",
       "image": "ghcr.io/aldarondo/claude-juicebox-mcp:latest",
-      "running": true
-    },
-    {
-      "name": "claude-nirvana",
-      "image": "ghcr.io/aldarondo/claude-nirvana:latest",
       "running": true
     },
     {
