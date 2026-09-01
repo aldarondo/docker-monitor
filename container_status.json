@@ -1,6 +1,11 @@
 {
-  "timestamp": "2026-08-31T08:00:00.660887+00:00",
+  "timestamp": "2026-09-01T08:00:01.324460+00:00",
   "containers": [
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
     {
       "name": "claude-nirvana",
       "image": "ghcr.io/aldarondo/claude-nirvana:latest",
@@ -67,11 +72,6 @@
       "running": true
     },
     {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": true
-    },
-    {
       "name": "sonarr",
       "image": "lscr.io/linuxserver/sonarr:latest",
       "running": true
@@ -84,7 +84,7 @@
     {
       "name": "juicepassproxy",
       "image": "ghcr.io/aldarondo/claude-juicebox-juicepassproxy:latest",
-      "running": true
+      "running": false
     },
     {
       "name": "juicebox-dns",
