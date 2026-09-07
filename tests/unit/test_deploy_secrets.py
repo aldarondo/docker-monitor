@@ -4,7 +4,7 @@ from unittest.mock import patch
 
 os.environ.setdefault("GH_PAT", "test-token")
 
-from checks.deploy_secrets import run, REQUIRED_SECRETS
+from checks.deploy_secrets import REQUIRED_SECRETS, run
 
 ENTRY = {"name": "my-container", "repo": "aldarondo/my-repo"}
 ALL_SECRETS = set(REQUIRED_SECRETS) | {"OTHER_SECRET"}
