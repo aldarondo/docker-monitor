@@ -11,6 +11,7 @@ Update logic:
 
 import re
 from datetime import datetime, timezone
+
 from . import github
 
 _BLOCKED_HEADER = "## 🚫 Blocked"
