@@ -1,7 +1,7 @@
 # All features require unit + integration tests before a task is marked complete.
-from unittest.mock import patch, MagicMock
-from lib import roadmap
+from unittest.mock import MagicMock, patch
 
+from lib import roadmap
 
 SAMPLE_ROADMAP = """# Test Project Roadmap
 
