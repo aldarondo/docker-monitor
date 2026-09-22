@@ -1,6 +1,11 @@
 {
-  "timestamp": "2026-09-21T08:00:02.969915+00:00",
+  "timestamp": "2026-09-22T08:00:01.070976+00:00",
   "containers": [
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
     {
       "name": "claude-nirvana",
       "image": "ghcr.io/aldarondo/claude-nirvana:latest",
@@ -70,11 +75,6 @@
       "name": "enphase-mcp",
       "image": "ghcr.io/aldarondo/enphase-mcp:latest",
       "running": true
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": false
     },
     {
       "name": "juicebox-mcp",
