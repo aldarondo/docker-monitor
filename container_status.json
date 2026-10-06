@@ -1,6 +1,11 @@
 {
-  "timestamp": "2026-10-05T08:00:01.599139+00:00",
+  "timestamp": "2026-10-06T08:00:04.071481+00:00",
   "containers": [
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": false
+    },
     {
       "name": "brian-drive",
       "image": "ghcr.io/aldarondo/brian-drive:latest",
@@ -49,11 +54,6 @@
     {
       "name": "enphase-mcp",
       "image": "ghcr.io/aldarondo/enphase-mcp:latest",
-      "running": true
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
       "running": true
     },
     {
