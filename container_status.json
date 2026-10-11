@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-10T08:00:01.060864+00:00",
+  "timestamp": "2026-10-11T08:00:01.623794+00:00",
   "containers": [
     {
       "name": "brian-mcp-memory",
@@ -84,7 +84,7 @@
     {
       "name": "juicepassproxy",
       "image": "ghcr.io/aldarondo/claude-juicebox-juicepassproxy:latest",
-      "running": false
+      "running": true
     },
     {
       "name": "juicebox-dns",
