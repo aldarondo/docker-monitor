@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-10-11T08:00:01.623794+00:00",
+  "timestamp": "2026-10-12T08:00:01.525243+00:00",
   "containers": [
     {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "name": "claude-nirvana",
+      "image": "ghcr.io/aldarondo/claude-nirvana:latest",
       "running": true
     },
     {
@@ -37,6 +37,21 @@
       "running": true
     },
     {
+      "name": "prowlarr",
+      "image": "lscr.io/linuxserver/prowlarr:latest",
+      "running": true
+    },
+    {
+      "name": "radarr",
+      "image": "lscr.io/linuxserver/radarr:latest",
+      "running": true
+    },
+    {
+      "name": "sonarr",
+      "image": "lscr.io/linuxserver/sonarr:latest",
+      "running": true
+    },
+    {
       "name": "brian-telegram",
       "image": "ghcr.io/aldarondo/brian-telegram:latest",
       "running": true
@@ -57,23 +72,8 @@
       "running": true
     },
     {
-      "name": "claude-nirvana",
-      "image": "ghcr.io/aldarondo/claude-nirvana:latest",
-      "running": true
-    },
-    {
-      "name": "sonarr",
-      "image": "lscr.io/linuxserver/sonarr:latest",
-      "running": true
-    },
-    {
-      "name": "radarr",
-      "image": "lscr.io/linuxserver/radarr:latest",
-      "running": true
-    },
-    {
-      "name": "prowlarr",
-      "image": "lscr.io/linuxserver/prowlarr:latest",
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
       "running": true
     },
     {
