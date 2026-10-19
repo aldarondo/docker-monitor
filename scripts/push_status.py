@@ -17,10 +17,10 @@ import sys
 # Allow running from the project root
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from lib.synology import get_running_containers
-from lib import github
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
+from lib import github
+from lib.synology import get_running_containers
 
 REPO = os.environ.get("GH_REPO", "aldarondo/docker-monitor")
 FILE_PATH = "container_status.json"
@@ -29,7 +29,7 @@ FILE_PATH = "container_status.json"
 def push_status() -> None:
     containers = get_running_containers()
     payload = {
-        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "timestamp": datetime.now(UTC).isoformat(),
         "containers": containers,
     }
     content = json.dumps(payload, indent=2) + "\n"
