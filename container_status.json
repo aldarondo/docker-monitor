@@ -1,11 +1,6 @@
 {
-  "timestamp": "2026-10-20T08:00:01.766589+00:00",
+  "timestamp": "2026-10-21T08:00:01.275608+00:00",
   "containers": [
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
-      "running": true
-    },
     {
       "name": "brian-drive",
       "image": "ghcr.io/aldarondo/brian-drive:latest",
