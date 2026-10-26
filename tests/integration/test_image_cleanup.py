@@ -5,8 +5,9 @@ Skipped automatically when the Docker socket is not available (CI, dev machines)
 On the NAS (where the monitor runs), this verifies the prune call actually works.
 """
 
-import pytest
 import docker as docker_sdk
+import pytest
+
 from checks import image_cleanup
 
 
