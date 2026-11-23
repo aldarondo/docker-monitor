@@ -10,7 +10,8 @@ Update logic:
 """
 
 import re
-from datetime import datetime, timezone
+from datetime import UTC, datetime
+
 from . import github
 
 _BLOCKED_HEADER = "## 🚫 Blocked"
@@ -25,7 +26,7 @@ def _pattern(check: str) -> re.Pattern:
 
 
 def _timestamp() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    return datetime.now(UTC).strftime("%Y-%m-%d %H:%M UTC")
 
 
 def write_blocked(repo: str, check: str, message: str) -> None:
