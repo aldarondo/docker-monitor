@@ -11,7 +11,7 @@ Fallback path (running in GitHub Actions):
 """
 
 import json
-from datetime import datetime, timezone, timedelta
+from datetime import UTC, datetime, timedelta
 
 STATUS_STALE_HOURS = 26  # monitor runs daily at 08:00 UTC; 26h gives a 2h buffer
 
@@ -44,7 +44,7 @@ def get_status_from_repo() -> tuple[list[dict] | None, str | None]:
 
     data = json.loads(content)
     ts = datetime.fromisoformat(data["timestamp"])
-    age = datetime.now(timezone.utc) - ts
+    age = datetime.now(UTC) - ts
     if age > timedelta(hours=STATUS_STALE_HOURS):
         hours = age.total_seconds() / 3600
         return None, f"container_status.json is {hours:.1f}h old (limit {STATUS_STALE_HOURS}h) — NAS container may have stopped"

@@ -22,16 +22,28 @@ Set RUN_ONCE=true to run a single check and exit (useful for testing).
 
 import logging
 import os
+
 import yaml
 from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
 
 from lib import logger as _logger
+
 _logger.setup()
 log = logging.getLogger("docker-monitor")
 
+from datetime import UTC
+
+from checks import (
+    container_status,
+    deploy_config,
+    deploy_secrets,
+    deploy_status,
+    ghcr_migration,
+    image_cleanup,
+    weekly_schedule,
+)
 from lib import synology
-from checks import deploy_status, weekly_schedule, ghcr_migration, container_status, deploy_config, deploy_secrets, image_cleanup
 
 CONFIG_PATH = os.path.join(os.path.dirname(__file__), "config", "containers.yaml")
 
@@ -80,11 +92,12 @@ def _load_container_status() -> set[str] | None:
 def _push_container_status(containers: list[dict]) -> None:
     """Commit container_status.json to the repo so GitHub Actions can use it."""
     import json
-    from datetime import datetime, timezone
+    from datetime import datetime
+
     from lib import github
 
     payload = {
-        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "timestamp": datetime.now(UTC).isoformat(),
         "containers": containers,
     }
     content = json.dumps(payload, indent=2) + "\n"
