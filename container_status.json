@@ -1,6 +1,11 @@
 {
-  "timestamp": "2026-11-23T08:00:01.786735+00:00",
+  "timestamp": "2026-11-24T08:00:01.499662+00:00",
   "containers": [
+    {
+      "name": "brian-mcp-memory",
+      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
+      "running": true
+    },
     {
       "name": "claude-nirvana",
       "image": "ghcr.io/aldarondo/claude-nirvana:latest",
@@ -59,11 +64,6 @@
     {
       "name": "claude-monarch",
       "image": "ghcr.io/aldarondo/claude-monarch:latest",
-      "running": true
-    },
-    {
-      "name": "brian-mcp-memory",
-      "image": "ghcr.io/aldarondo/brian-mcp-memory:latest",
       "running": true
     },
     {
